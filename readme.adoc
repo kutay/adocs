@@ -1,44 +1,5 @@
 = Docs
+:toc: left
+:sectanchors:
 
-
-
-== SSH
-
-=== Generating SSH key
-
-----
-# will ask location and passphrase
-ssh-keygen
-# creates a private and public keys in ~/.ssh
-----
-
-=== ssh-copy-id
-
-----
-# Copies all the keys contained in the ssh agent - see "ssh-add -L"
-ssh-copy-id <user>@<host>
-
-# Copies the specified key
-ssh-copy-id -i ~/.ssh/mykey.pub <user>@<host>
-
-# If the server uses a different port than 22
-ssh-copy-id "<user>@<host> -p <port>"
-----
-
-
-=== Connecting to remote host
-
-----
-ssh <user>@<host>
-
-# use a different key
-ssh -i ~/.ssh/otherkey <user>@<host>
-----
-
-
-=== ssh config
-
-
-
-=== sshd config
-
+include::ssh.adoc[]
