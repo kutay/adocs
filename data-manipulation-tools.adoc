@@ -1,0 +1,19 @@
+
+
+== Data manipulation tools
+
+=== sed
+
+=== awk
+
+=== jq
+
+=== xmllint
+
+
+----
+# Format xml file 
+xmllint --format <file.xml>
+----
+
+

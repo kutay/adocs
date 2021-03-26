@@ -1,0 +1,13 @@
+
+
+== systemd
+
+=== journalctl
+
+----
+# flush journalctl logs to keep last 2 days
+journalctl --vacuum-time=2d
+
+# flush journalctl logs to keep last 500M
+journalctl --vacuum-size=500M
+----

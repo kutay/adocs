@@ -1,0 +1,42 @@
+
+
+== Docker 
+
+.Building images
+----
+# https://docs.docker.com/engine/reference/commandline/build/
+
+docker build .
+
+# Use another file than default "Dockerfile"
+docker build -f <FILENAME> .
+
+# Build and tag your image
+docker build -t <TAG> .
+
+----
+
+
+.Running containers
+----
+# https://docs.docker.com/engine/reference/run/
+#   docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
+
+docker run --name <CONTAINER_NAME> -p <OUT_PORT>:<IN_PORT> -d <IMAGE>
+
+docker run --name <CONTAINER_NAME> -p <OUT_PORT>:<IN_PORT> -e VARIABLE=xxx -d <IMAGE>
+----
+
+
+
+.Pruning
+----
+# https://docs.docker.com/engine/reference/commandline/system_prune/
+
+# Remove all unused images not just dangling ones
+docker system prune -a
+
+# By default, volumes are not pruned
+docker system prune -a --volumes
+----
+
