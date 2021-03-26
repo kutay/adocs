@@ -1,0 +1,147 @@
+= Docs
+:toc: left
+:sectanchors:
+
+
+== Databases
+
+=== sqlite3
+
+----
+# List databases
+sqlite3 sqlite.db '.databases'
+
+sqlite3 sqlite.db '.tables'
+
+# Execute a SQL script
+sqlite3 sqlite.db '.read create.sql'
+----
+
+
+
+
+
+== Data manipulation tools
+
+=== sed
+
+=== awk
+
+=== jq
+
+=== xmllint
+
+
+----
+# Format xml file 
+xmllint --format <file.xml>
+----
+
+
+
+
+== Docker 
+
+.Building images
+----
+# https://docs.docker.com/engine/reference/commandline/build/
+
+docker build .
+
+# Use another file than default "Dockerfile"
+docker build -f <FILENAME> .
+
+# Build and tag your image
+docker build -t <TAG> .
+
+----
+
+
+.Running containers
+----
+# https://docs.docker.com/engine/reference/run/
+#   docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
+
+docker run --name <CONTAINER_NAME> -p <OUT_PORT>:<IN_PORT> -d <IMAGE>
+
+docker run --name <CONTAINER_NAME> -p <OUT_PORT>:<IN_PORT> -e VARIABLE=xxx -d <IMAGE>
+----
+
+
+
+.Pruning
+----
+# https://docs.docker.com/engine/reference/commandline/system_prune/
+
+# Remove all unused images not just dangling ones
+docker system prune -a
+
+# By default, volumes are not pruned
+docker system prune -a --volumes
+----
+
+
+== Kubernetes
+
+=== kubeadm
+
+
+=== kubectl
+
+
+
+=== kubectx
+
+== SSH
+
+=== Generating SSH key
+
+----
+# will ask location and passphrase
+ssh-keygen
+# creates a private and public keys in ~/.ssh
+----
+
+=== ssh-copy-id
+
+----
+# Copies all the keys contained in the ssh agent - see "ssh-add -L"
+ssh-copy-id <user>@<host>
+
+# Copies the specified key
+ssh-copy-id -i ~/.ssh/mykey.pub <user>@<host>
+
+# If the server uses a different port than 22
+ssh-copy-id "<user>@<host> -p <port>"
+----
+
+
+=== Connecting to remote host
+
+----
+ssh <user>@<host>
+
+# use a different key
+ssh -i ~/.ssh/otherkey <user>@<host>
+----
+
+
+=== ssh config
+
+
+
+=== sshd config
+
+
+
+== systemd
+
+=== journalctl
+
+----
+# flush journalctl logs to keep last 2 days
+journalctl --vacuum-time=2d
+
+# flush journalctl logs to keep last 500M
+journalctl --vacuum-size=500M
+----
