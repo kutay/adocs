@@ -3,6 +3,7 @@
 
 === sqlite3
 
+[source,bash]
 ----
 # List databases
 sqlite3 sqlite.db '.databases'

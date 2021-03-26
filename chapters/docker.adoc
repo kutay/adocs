@@ -2,6 +2,7 @@
 
 == Docker 
 
+[source,bash]
 .Building images
 ----
 # https://docs.docker.com/engine/reference/commandline/build/
@@ -16,7 +17,7 @@ docker build -t <TAG> .
 
 ----
 
-
+[source,bash]
 .Running containers
 ----
 # https://docs.docker.com/engine/reference/run/
@@ -28,7 +29,7 @@ docker run --name <CONTAINER_NAME> -p <OUT_PORT>:<IN_PORT> -e VARIABLE=xxx -d <I
 ----
 
 
-
+[source,bash]
 .Pruning
 ----
 # https://docs.docker.com/engine/reference/commandline/system_prune/

@@ -4,6 +4,7 @@
 
 === journalctl
 
+[source,bash]
 ----
 # flush journalctl logs to keep last 2 days
 journalctl --vacuum-time=2d

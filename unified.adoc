@@ -1,12 +1,13 @@
 = Docs
 :toc: left
 :sectanchors:
-
+:source-highlighter: highlight.js
 
 == Databases
 
 === sqlite3
 
+[source,bash]
 ----
 # List databases
 sqlite3 sqlite.db '.databases'
@@ -31,7 +32,7 @@ sqlite3 sqlite.db '.read create.sql'
 
 === xmllint
 
-
+[source,bash]
 ----
 # Format xml file 
 xmllint --format <file.xml>
@@ -42,6 +43,7 @@ xmllint --format <file.xml>
 
 == Docker 
 
+[source,bash]
 .Building images
 ----
 # https://docs.docker.com/engine/reference/commandline/build/
@@ -56,7 +58,7 @@ docker build -t <TAG> .
 
 ----
 
-
+[source,bash]
 .Running containers
 ----
 # https://docs.docker.com/engine/reference/run/
@@ -68,7 +70,7 @@ docker run --name <CONTAINER_NAME> -p <OUT_PORT>:<IN_PORT> -e VARIABLE=xxx -d <I
 ----
 
 
-
+[source,bash]
 .Pruning
 ----
 # https://docs.docker.com/engine/reference/commandline/system_prune/
@@ -96,6 +98,7 @@ docker system prune -a --volumes
 
 === Generating SSH key
 
+[source,bash]
 ----
 # will ask location and passphrase
 ssh-keygen
@@ -104,6 +107,7 @@ ssh-keygen
 
 === ssh-copy-id
 
+[source,bash]
 ----
 # Copies all the keys contained in the ssh agent - see "ssh-add -L"
 ssh-copy-id <user>@<host>
@@ -118,6 +122,7 @@ ssh-copy-id "<user>@<host> -p <port>"
 
 === Connecting to remote host
 
+[source,bash]
 ----
 ssh <user>@<host>
 
@@ -138,6 +143,7 @@ ssh -i ~/.ssh/otherkey <user>@<host>
 
 === journalctl
 
+[source,bash]
 ----
 # flush journalctl logs to keep last 2 days
 journalctl --vacuum-time=2d

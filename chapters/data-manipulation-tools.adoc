@@ -10,7 +10,7 @@
 
 === xmllint
 
-
+[source,bash]
 ----
 # Format xml file 
 xmllint --format <file.xml>

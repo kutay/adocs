@@ -6,7 +6,8 @@ cat << EOF > unified.adoc
 = Docs
 :toc: left
 :sectanchors:
-
+:source-highlighter: highlight.js
 EOF
 
 cat chapters/*.adoc >> unified.adoc
+asciidoctor unified.adoc

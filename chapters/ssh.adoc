@@ -3,6 +3,7 @@
 
 === Generating SSH key
 
+[source,bash]
 ----
 # will ask location and passphrase
 ssh-keygen
@@ -11,6 +12,7 @@ ssh-keygen
 
 === ssh-copy-id
 
+[source,bash]
 ----
 # Copies all the keys contained in the ssh agent - see "ssh-add -L"
 ssh-copy-id <user>@<host>
@@ -25,6 +27,7 @@ ssh-copy-id "<user>@<host> -p <port>"
 
 === Connecting to remote host
 
+[source,bash]
 ----
 ssh <user>@<host>
 
