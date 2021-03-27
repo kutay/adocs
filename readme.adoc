@@ -3,15 +3,15 @@
 :sectanchors:
 
 
-include::data-manipulation-tools.adoc[]
+include::chapters/data-manipulation-tools.adoc[]
 
-include::ssh.adoc[]
+include::chapters/ssh.adoc[]
 
-include::databases.adoc[Databases]
+include::chapters/databases.adoc[Databases]
 
-include::docker.adoc[]
+include::chapters/docker.adoc[]
 
-include::systemd.adoc[]
+include::chapters/systemd.adoc[]
 
 
 

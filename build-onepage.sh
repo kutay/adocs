@@ -10,4 +10,6 @@ cat << EOF > unified.adoc
 EOF
 
 cat chapters/*.adoc >> unified.adoc
+
 asciidoctor unified.adoc
+asciidoctor readme.adoc
