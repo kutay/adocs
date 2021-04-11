@@ -94,6 +94,41 @@ docker system prune -a --volumes
 
 === kubectx
 
+== Network
+
+
+=== nmap
+
+[source,bash]
+----
+# scan the subnet for all hosts
+#  -sn means there is no port scan
+sudo nmap -sn 192.168.1.0/24
+----
+
+
+=== nmcli 
+
+Command-line tool for controlling NetworkManager.
+
+[source,bash]
+----
+# list all available wifi networks
+nmcli dev wifi
+
+# print all fields
+nmcli -f ALL dev wifi
+----
+== Shell
+
+=== ln 
+
+[source,bash]
+----
+# Create a link from DEST to SOURCE
+ln -s <SOURCE> <DESTINATION>
+----
+
 == SSH
 
 === Generating SSH key
@@ -150,4 +185,41 @@ journalctl --vacuum-time=2d
 
 # flush journalctl logs to keep last 500M
 journalctl --vacuum-size=500M
+----
+
+== Virtualization
+
+=== Multipass
+
+
+[source,bash]
+.Create a VM
+----
+multipass launch --name <VM_NAME>
+
+multipass launch --name <VM_NAME> --cloud-init cloud-config.yaml
+
+
+----
+
+[source,bash]
+----
+multipass stop [<VM_NAME>]
+
+multipass start <VM_NAME>
+
+multipass delete <VM_NAME>
+
+multipass purge
+----
+
+
+[source,bash]
+----
+# List VMs
+multipass ls
+
+# Execute a command on a specific VM
+multipass exec <VM_NAME> -- <COMMAND>
+
 ----

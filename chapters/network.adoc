@@ -1,0 +1,26 @@
+
+== Network
+
+
+=== nmap
+
+[source,bash]
+----
+# scan the subnet for all hosts
+#  -sn means there is no port scan
+sudo nmap -sn 192.168.1.0/24
+----
+
+
+=== nmcli 
+
+Command-line tool for controlling NetworkManager.
+
+[source,bash]
+----
+# list all available wifi networks
+nmcli dev wifi
+
+# print all fields
+nmcli -f ALL dev wifi
+----

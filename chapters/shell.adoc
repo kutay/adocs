@@ -1,0 +1,10 @@
+
+== Shell
+
+=== ln 
+
+[source,bash]
+----
+# Create a link from DEST to SOURCE
+ln -s <SOURCE> <DESTINATION>
+----

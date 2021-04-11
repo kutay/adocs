@@ -1,0 +1,37 @@
+
+== Virtualization
+
+=== Multipass
+
+
+[source,bash]
+.Create a VM
+----
+multipass launch --name <VM_NAME>
+
+multipass launch --name <VM_NAME> --cloud-init cloud-config.yaml
+
+
+----
+
+[source,bash]
+----
+multipass stop [<VM_NAME>]
+
+multipass start <VM_NAME>
+
+multipass delete <VM_NAME>
+
+multipass purge
+----
+
+
+[source,bash]
+----
+# List VMs
+multipass ls
+
+# Execute a command on a specific VM
+multipass exec <VM_NAME> -- <COMMAND>
+
+----
