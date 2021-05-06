@@ -119,6 +119,42 @@ nmcli dev wifi
 # print all fields
 nmcli -f ALL dev wifi
 ----
+== Sandboxing
+
+=== firejail
+
+
+[source,bash]
+.firejail
+----
+# opens a shell in jail
+firejail
+
+firejail <COMMAND>
+
+firejail --noprofile <COMMAND>
+
+# block network access 
+firejail --net=none <COMMAND>
+
+firejail --appimage <APPIMAGE>
+
+firejail --appimage --noprofile --net=none <APPIMAGE>
+----
+
+
+[source,bash]
+.firemon
+----
+# list current jails
+firemon --list
+
+firemon --tree
+
+firemon --top
+----
+
+* https://firejail.wordpress.com/documentation-2/basic-usage/
 == Shell
 
 === ln 
@@ -189,7 +225,7 @@ journalctl --vacuum-size=500M
 
 == Virtualization
 
-=== Multipass
+=== multipass
 
 
 [source,bash]
