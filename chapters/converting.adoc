@@ -1,0 +1,8 @@
+
+
+== Image manipulation
+
+[source,bash]
+----
+convert -resize 25% $1 generated/$1
+----
