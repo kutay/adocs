@@ -8,3 +8,47 @@
 # Create a link from DEST to SOURCE
 ln -s <SOURCE> <DESTINATION>
 ----
+
+
+
+=== lsof
+
+lsof : list open files
+
+
+
+[source,bash]
+----
+# show all connections
+lsof -i
+
+# but only TCP
+lsof -iTCP
+
+# filter by port
+lsof -i :22
+
+# or host
+lsof -i@<ip>
+
+# find listening ports
+lsof -i -sTCP:LISTEN
+----
+
+[source,bash]
+----
+# show what a given user has open
+lsof -u <user>
+
+# show what's interaction with a file/dir
+lsof /var/log/messages/
+----
+
+[source,bash]
+----
+# see what files and connections a command is using
+lsof -c <command>
+
+# or by pid
+lsof -p <pid>
+----

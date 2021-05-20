@@ -24,3 +24,22 @@ nmcli dev wifi
 # print all fields
 nmcli -f ALL dev wifi
 ----
+
+
+
+=== dig
+
+[source,bash]
+----
+# only get the answer section
+dig +short orkhon.dev 
+
+# find the nameserver details
+dig orkhon.dev ns +short
+
+# use a different resolver
+dig orkhon.dev @1.1.1.1
+
+# reverse lookup
+dig -x <ip>
+----

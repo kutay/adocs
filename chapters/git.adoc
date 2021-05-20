@@ -1,0 +1,26 @@
+
+
+== Git
+
+
+[source,bash]
+----
+git commit -m "First line" \
+    -m "Second line"
+----
+
+
+ 
+
+[source,bash]
+----
+git log -1
+----
+
+
+
+
+[source,bash]
+----
+git --no-pager log 
+----

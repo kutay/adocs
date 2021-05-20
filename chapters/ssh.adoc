@@ -42,3 +42,17 @@ ssh -i ~/.ssh/otherkey <user>@<host>
 
 === sshd config
 
+
+
+
+== SOCKS proxy
+
+[source,bash]
+----
+# -D 1337 : open SOCKS proxy on local port 1337
+# -q : quiet mode, don’t output anything locally
+# -C : compress data
+# -N : do not execute remote commands, useful for just forwarding ports
+# -f : run in background
+ssh -D 1337 -q -C -N -f <user>@<host>
+----

@@ -83,6 +83,31 @@ docker system prune -a --volumes
 ----
 
 
+
+== Git
+
+
+[source,bash]
+----
+git commit -m "First line" \
+    -m "Second line"
+----
+
+
+ 
+
+[source,bash]
+----
+git log -1
+----
+
+
+
+
+[source,bash]
+----
+git --no-pager log 
+----
 == Kubernetes
 
 === kubeadm
@@ -118,6 +143,25 @@ nmcli dev wifi
 
 # print all fields
 nmcli -f ALL dev wifi
+----
+
+
+
+=== dig
+
+[source,bash]
+----
+# only get the answer section
+dig +short orkhon.dev 
+
+# find the nameserver details
+dig orkhon.dev ns +short
+
+# use a different resolver
+dig orkhon.dev @1.1.1.1
+
+# reverse lookup
+dig -x <ip>
 ----
 == Sandboxing
 
@@ -165,6 +209,49 @@ firemon --top
 ln -s <SOURCE> <DESTINATION>
 ----
 
+
+
+=== lsof
+
+lsof : list open files
+
+
+
+[source,bash]
+----
+# show all connections
+lsof -i
+
+# but only TCP
+lsof -iTCP
+
+# filter by port
+lsof -i :22
+
+# or host
+lsof -i@<ip>
+
+# find listening ports
+lsof -i -sTCP:LISTEN
+----
+
+[source,bash]
+----
+# show what a given user has open
+lsof -u <user>
+
+# show what's interaction with a file/dir
+lsof /var/log/messages/
+----
+
+[source,bash]
+----
+# see what files and connections a command is using
+lsof -c <command>
+
+# or by pid
+lsof -p <pid>
+----
 == SSH
 
 === Generating SSH key
@@ -209,6 +296,19 @@ ssh -i ~/.ssh/otherkey <user>@<host>
 === sshd config
 
 
+
+
+== SOCKS proxy
+
+[source,bash]
+----
+# -D 1337 : open SOCKS proxy on local port 1337
+# -q : quiet mode, don’t output anything locally
+# -C : compress data
+# -N : do not execute remote commands, useful for just forwarding ports
+# -f : run in background
+ssh -D 1337 -q -C -N -f <user>@<host>
+----
 
 == systemd
 
