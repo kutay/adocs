@@ -3,15 +3,6 @@
 :sectanchors:
 
 
-include::chapters/data-manipulation-tools.adoc[]
-
-include::chapters/ssh.adoc[]
-
-include::chapters/databases.adoc[Databases]
-
-include::chapters/docker.adoc[]
-
-include::chapters/systemd.adoc[]
-
-
-
+* link:unified.adoc[Cheatsheet]
+* link:online.adoc[Online tools]
+* link:releases.adoc[Releases]

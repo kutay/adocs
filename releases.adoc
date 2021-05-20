@@ -1,0 +1,116 @@
+= Releases
+:toc: left
+:sectanchors:
+
+
+== General
+
+=== 2021
+
+* 18/05/2021 : HashiCorp Nomad 1.1
+** https://www.hashicorp.com/blog/announcing-general-availability-of-hashicorp-nomad-1-1
+
+
+
+=== 2020
+
+* 08/12/2020 : Deno 1.6
+** Deno can now build self contained/standalone binaries : use "deno compile"
+** build-in Deno Language Server
+** https://deno.com/blog/v1.6
+
+
+* 15/05/2020 : Kafka will remove ZooKeeper dependency
+** https://www.confluent.io/blog/removing-zookeeper-dependency-in-kafka/
+
+
+
+
+== AWS
+
+* 10/06/2020 : Introducting AWS CodeArtifact
+** AWS CodeArtifact is a fully managed artifact repository service for maven, PyPi, npm packages
+
+
+== GCP
+
+
+* 08/09/2020 : Google Cloud API Gateway is now available in public beta
+** https://cloud.google.com/blog/products/serverless/google-cloud-api-gateway-is-now-available-in-public-beta
+* 19/08/2020 : Google announces Cilium & eBPF as the new networking dataplane for GKE
+** https://cilium.io/blog/2020/08/19/google-chooses-cilium-for-gke-networking/
+* 14/04/2020 : External HTTP LBs now support URL rewrites and redirects
+* 23/04/2020 : External HTTP LBs now support header based routing and query parameter-based routing
+
+GCP encrypts VPC traffic between all data centers (Encryption in Transit in Google Cloud)
+They are working (04/2020) on encrypting VPC traffic within the boundaries of the data centers
+
+
+== Kubernetes 
+
+* 08/12/2020 : Kubernetes 1.20: The Raddest Release
+** Volume Snapshot Operations Goes Stable
+** Kubectl Debug Graduates to Beta
+** Dockershim Deprecation
+
+* 14/08/2020 : Kubernetes - Introducing Hierarchical Namespaces
+** https://kubernetes.io/blog/2020/08/14/introducing-hierarchical-namespaces/
+
+== Monitoring
+
+
+* 01/12/2020 : Vector 0.11.0
+** First-class Kubernetes integration
+** JSON and YAML config formats are accepted
+
+
+== Automation
+
+
+* 22/06/2020 : Announcing Terraform 0.13 Beta
+** https://www.hashicorp.com/blog/announcing-the-terraform-0-13-beta/
+** count and for_each for modules
+** depends_on for modules
+
+* 14/11/2019 : Ansible 1.10 brings Collections
+** https://www.ansible.com/blog/getting-started-with-ansible-collections
+
+
+== Frontend
+
+
+== Proxy & Service mesh
+
+
+* 13/05/2021 : HAProxy 2.4
+** new features : 
+*** support for HTTP/2 WebSockets
+*** authorization and routing of MQTT and FIX protocol messages
+*** built-in OpenTracing integration
+*** new Prometheus metrics
+*** server timeouts that you can change on the fly
+** https://www.haproxy.com/blog/announcing-haproxy-2-4/
+
+
+* 07/12/2020 : Flagger 1.4.0
+** Add support for Traefik ingress controller
+
+
+* 13/08/2020 : Envoy 1.15
+** adds Postgres extension
+** https://www.cncf.io/blog/2020/08/13/envoy-1-15-introduces-a-new-postgres-extension-with-monitoring-support/
+
+
+* 09/06/2020 : Announcing Linkerd 2.8
+** https://linkerd.io/2020/06/09/announcing-linkerd-2.8/
+** multi-cluster extension 
+*** does not work yet on EKS
+
+* 21/05/2020 : Announcing Istio 1.6
+** Simplifying Istio even more
+** https://istio.io/latest/news/releases/1.6.x/announcing-1.6/
+
+* 05/03/2020 : Announcing Istio 1.5
+** Microservices to monolith
+** https://istio.io/latest/news/releases/1.5.x/announcing-1.5/
+
