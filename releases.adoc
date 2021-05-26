@@ -58,6 +58,9 @@ They are working (04/2020) on encrypting VPC traffic within the boundaries of th
 
 == Monitoring
 
+* 21/04/2021 : Vector 0.13.0
+** introduces "vector tap" subcommand 
+** https://vector.dev/releases/0.13.0/
 
 * 01/12/2020 : Vector 0.11.0
 ** First-class Kubernetes integration

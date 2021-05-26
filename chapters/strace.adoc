@@ -1,0 +1,27 @@
+
+== strace
+
+
+[source,bash]
+----
+# strace a program
+strace <command>
+
+# print time spent in system call
+strace -T <command>
+
+# print time of day at the start of each line
+strace -t <command>
+
+# print a histogram of system calls and time spent, at the end of execution
+strace -c <command>
+
+# trace only specific system calls (open and close)
+strace -e trace=open,close <command>
+
+# strace a running process
+strace -p <pid>
+
+# strace a running process and threads
+strace -fp <pid>
+----

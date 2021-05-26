@@ -3,6 +3,23 @@
 :sectanchors:
 :source-highlighter: highlight.js
 
+
+== Image manipulation
+
+[source,bash]
+----
+convert -resize 25% $1 generated/$1
+----
+
+
+== PDF related
+
+
+----
+# Convert svg file to pdf
+rsvg-convert -f pdf -o $1.pdf $1
+----
+
 == Databases
 
 === sqlite3
@@ -308,6 +325,32 @@ ssh -i ~/.ssh/otherkey <user>@<host>
 # -N : do not execute remote commands, useful for just forwarding ports
 # -f : run in background
 ssh -D 1337 -q -C -N -f <user>@<host>
+----
+== strace
+
+
+[source,bash]
+----
+# strace a program
+strace <command>
+
+# print time spent in system call
+strace -T <command>
+
+# print time of day at the start of each line
+strace -t <command>
+
+# print a histogram of system calls and time spent, at the end of execution
+strace -c <command>
+
+# trace only specific system calls (open and close)
+strace -e trace=open,close <command>
+
+# strace a running process
+strace -p <pid>
+
+# strace a running process and threads
+strace -fp <pid>
 ----
 
 == systemd
