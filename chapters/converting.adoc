@@ -1,14 +1,15 @@
 
 
-== Image manipulation
+== File manipulation 
+
+=== Image manipulation
 
 [source,bash]
 ----
 convert -resize 25% $1 generated/$1
 ----
 
-
-== PDF related
+=== PDF related
 
 [source,bash]
 ----

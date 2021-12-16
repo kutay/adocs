@@ -16,3 +16,34 @@ sqlite3 sqlite.db '.read create.sql'
 
 
 
+=== PostgreSQL
+
+==== Manage users 
+
+.How to list users?
+[source,bash]
+----
+sudo su - postgres
+psql
+\du
+----
+
+.How  to create a new user?
+[source,bash]
+----
+sudo su - postgres
+createuser username
+psql
+\password username # change password
+----
+
+
+==== Backup and Restore
+
+.How to backup and restore databases?
+[source,bash]
+----
+sudo su - postgres
+pg_dumpall > all.sql
+psql -f all.sql
+----

@@ -1,7 +1,9 @@
 
 == SSH
 
-=== Generating SSH key
+=== SSH keys
+
+==== Generating SSH key
 
 [source,bash]
 ----
@@ -10,7 +12,7 @@ ssh-keygen
 # creates a private and public keys in ~/.ssh
 ----
 
-=== ssh-copy-id
+==== ssh-copy-id
 
 [source,bash]
 ----
@@ -35,17 +37,18 @@ ssh <user>@<host>
 ssh -i ~/.ssh/otherkey <user>@<host>
 ----
 
+=== Configuration
 
-=== ssh config
-
-
-
-=== sshd config
+==== ssh config
 
 
 
+==== sshd config
 
-== SOCKS proxy
+
+
+
+=== SOCKS proxy
 
 [source,bash]
 ----

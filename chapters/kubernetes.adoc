@@ -7,6 +7,22 @@
 === kubectl
 
 
+==== config & context
+
+[source,bash]
+----
+kubectl config view 
+
+kubectl config view --minify
+
+# context = cluster + namespace + user
+kubectl config current-context
+
+# or kubectx
+kubectl config get-contexts 
+kubectl config use-context $CONTEXT
+----
+
 [source,bash]
 ----
 kubectl -v <COMMAND>
@@ -16,9 +32,20 @@ kubectl explain
 kubectl auth can-i
 kubectl <command> -o json/yaml
 
-kubectl config view --minify
 
 ----
+
+[source,bash]
+.Nodes
+----
+# More information about your nodes
+kubectl get nodes -o wide
+
+# List your node labels
+kubectl get nodes --show-labels
+----
+
+
 
 
 === kubectx

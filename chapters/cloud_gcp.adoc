@@ -1,0 +1,42 @@
+
+
+== GCP - Google Cloud Platform
+
+=== GKE 
+
+[source,bash]
+.Configure your gcloud
+----
+gcloud config configurations list
+
+gcloud config configurations create <NAME1>
+gcloud config configurations create <NAME2>
+
+gcloud config configurations activate <NAME2>
+
+gcloud projects list
+
+# List existing clusters
+gcloud container clusters list
+
+# Adds cluster configuration to kubeconfig via gcloud
+gcloud container clusters get-credentials --region <REGION> <CLUSTERNAME>
+----
+
+
+=== IAM
+
+
+[source,bash]
+----
+# Describe a role to check its permissions
+gcloud iam roles describe roles/iam.roleViewer
+
+# Create a custom role
+gcloud iam roles create [ROLE-ID] --project [PROJECT-ID] \
+	--title [ROLE-TITLE] --description [ROLE-DESCRIPTION] \
+	--permissions [PERMISSIONS-LIST] --stage [LAUNCH-STAGE]
+----
+
+
+

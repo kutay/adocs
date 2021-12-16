@@ -1,0 +1,27 @@
+
+== Elasticsearch
+
+
+[source,bash]
+----
+
+curl ${ES_SERVER}/_cat/indices
+
+curl ${ES_SERVER}/_cat/shards
+
+curl ${ES_SERVER}/_nodes
+curl ${ES_SERVER}/_nodes/stats
+curl ${ES_SERVER}/_nodes?filter_path=**.mlockall
+curl ${ES_SERVER}/_nodes/stats/process?filter_path=**.max_file_descriptors
+
+curl ${ES_SERVER}/_cluster/settings?include_defaults=true&flat_settings=true
+
+curl ${ES_SERVER}/_tasks?detailed&group_by=parents
+curl ${ES_SERVER}/_tasks/ariYbTAwRTGAxewNhAP-xg:289442
+
+curl ${ES_SERVER}${INDICE}/_segments
+
+curl -X POST ${ES_SERVER}${INDICE}/_flush/synced
+curl -X POST ${ES_SERVER}${INDICE}/_forcemerge?max_num_segments=1
+
+----

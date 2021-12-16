@@ -2,6 +2,41 @@
 == Network
 
 
+=== curl 
+
+[source,bash]
+----
+
+# Basic GET request
+curl <URL>
+
+# Specify the HTTP method
+curl -X <METHOD> <URL>
+
+# Include the response headers in the output
+curl -i <URL>
+
+# Set a custom header
+curl -H <HEADER> <URL>
+
+# Save the content to a file
+curl <URL> -o <FILE>
+
+# POST request - form-like
+curl -X POST -F 'name=foobar' <URL>
+
+# POST request - application/x-www-form-urlencoded
+curl -X POST -d 'name=foobar' <URL>
+
+# Specify header
+curl -X POST -H "Content-Type: application/json" -d '{"name": "foobar", "email": "foo@bar.com"}' <URL>
+
+# upload file 
+curl -X POST -F 'image=@/home/user/Pictures/wallpaper.jpg' <URL>
+----
+
+
+
 === nmap
 
 [source,bash]

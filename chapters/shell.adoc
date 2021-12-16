@@ -1,5 +1,78 @@
 
-== Shell
+
+== Bash
+
+=== bash redirections
+
+[source,bash]
+----
+# Redirect the standard output (stdout) of cmd to a file.
+cmd > file 
+
+# Same as cmd > file. 1 is the default file descriptor (fd) for stdout.
+cmd 1> file
+
+# Redirect the standard error (stderr) of cmd to a file. 2 is the default fd for stderr.
+cmd 2> file
+
+# Append stdout of cmd to a file.
+cmd >> file
+
+# Append stderr of cmd to a file.
+cmd 2>> file
+
+# Redirect stdout and stderr of cmd to a file.
+cmd &> file
+
+# Another way to redirect both stdout and stderr of cmd to a file. 
+# This is not the same as cmd 2>&1 > file. Redirection order matters!
+cmd > file 2>&1
+
+# Discard stdout of cmd.
+cmd > /dev/null
+
+# Discard stderr of cmd.
+cmd 2> /dev/null
+
+# Discard stdout and stderr of cmd
+cmd &> /dev/null
+
+# Redirect the contents of the file to the standard input (stdin) of cmd.
+cmd < file
+
+# Redirect stdout of cmd to a file and print it to screen
+cmd | tee file
+----
+
+
+[source,bash]
+.Here-docs
+----
+# Redirect a bunch of lines to the stdin. 
+# If 'EOL' is quoted, text is treated literally. 
+# This is called a here-document.
+cmd << EOL
+line1
+line2
+EOL
+
+# Redirect a bunch of lines to the stdin and strip the leading tabs.
+cmd <<- EOL
+<tab>foo
+<tab><tab>bar
+EOL
+
+# Redirect a single line of text to the stdin of cmd. This is called a here-string.
+cmd <<< "string"
+----
+
+Source : https://github.com/pkrumins/bash-redirections-cheat-sheet 
+
+
+
+
+== Shell tools
+
 
 === ln 
 
