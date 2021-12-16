@@ -14,7 +14,7 @@ convert -resize 25% $1 generated/$1
 
 == PDF related
 
-
+[source,bash]
 ----
 # Convert svg file to pdf
 rsvg-convert -f pdf -o $1.pdf $1
@@ -46,6 +46,14 @@ sqlite3 sqlite.db '.read create.sql'
 === awk
 
 === jq
+
+
+[source,bash]
+----
+jq -f script.jq
+----
+
+
 
 === xmllint
 
@@ -133,6 +141,19 @@ git --no-pager log
 === kubectl
 
 
+[source,bash]
+----
+kubectl -v <COMMAND>
+kubectl -v 99 <COMMAND>
+
+kubectl explain
+kubectl auth can-i
+kubectl <command> -o json/yaml
+
+kubectl config view --minify
+
+----
+
 
 === kubectx
 
@@ -179,6 +200,13 @@ dig orkhon.dev @1.1.1.1
 
 # reverse lookup
 dig -x <ip>
+----
+== openssl
+
+[source,bash]
+----
+openssl verify -CAfile cluster-ca.cert client.cert
+openssl s_client -connect 192.0.0.1:6443
 ----
 == Sandboxing
 

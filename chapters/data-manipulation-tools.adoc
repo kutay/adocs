@@ -8,6 +8,14 @@
 
 === jq
 
+
+[source,bash]
+----
+jq -f script.jq
+----
+
+
+
 === xmllint
 
 [source,bash]

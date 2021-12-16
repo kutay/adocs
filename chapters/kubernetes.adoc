@@ -7,5 +7,18 @@
 === kubectl
 
 
+[source,bash]
+----
+kubectl -v <COMMAND>
+kubectl -v 99 <COMMAND>
+
+kubectl explain
+kubectl auth can-i
+kubectl <command> -o json/yaml
+
+kubectl config view --minify
+
+----
+
 
 === kubectx
