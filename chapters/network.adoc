@@ -78,3 +78,7 @@ dig orkhon.dev @1.1.1.1
 # reverse lookup
 dig -x <ip>
 ----
+
+
+=== ping 
+

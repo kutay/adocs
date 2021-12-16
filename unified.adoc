@@ -4,15 +4,58 @@
 :source-highlighter: highlight.js
 
 
-== Image manipulation
+== GCP - Google Cloud Platform
+
+=== GKE 
+
+[source,bash]
+.Configure your gcloud
+----
+gcloud config configurations list
+
+gcloud config configurations create <NAME1>
+gcloud config configurations create <NAME2>
+
+gcloud config configurations activate <NAME2>
+
+gcloud projects list
+
+# List existing clusters
+gcloud container clusters list
+
+# Adds cluster configuration to kubeconfig via gcloud
+gcloud container clusters get-credentials --region <REGION> <CLUSTERNAME>
+----
+
+
+=== IAM
+
+
+[source,bash]
+----
+# Describe a role to check its permissions
+gcloud iam roles describe roles/iam.roleViewer
+
+# Create a custom role
+gcloud iam roles create [ROLE-ID] --project [PROJECT-ID] \
+	--title [ROLE-TITLE] --description [ROLE-DESCRIPTION] \
+	--permissions [PERMISSIONS-LIST] --stage [LAUNCH-STAGE]
+----
+
+
+
+
+
+== File manipulation 
+
+=== Image manipulation
 
 [source,bash]
 ----
 convert -resize 25% $1 generated/$1
 ----
 
-
-== PDF related
+=== PDF related
 
 [source,bash]
 ----
@@ -37,6 +80,37 @@ sqlite3 sqlite.db '.read create.sql'
 
 
 
+=== PostgreSQL
+
+==== Manage users 
+
+.How to list users?
+[source,bash]
+----
+sudo su - postgres
+psql
+\du
+----
+
+.How  to create a new user?
+[source,bash]
+----
+sudo su - postgres
+createuser username
+psql
+\password username # change password
+----
+
+
+==== Backup and Restore
+
+.How to backup and restore databases?
+[source,bash]
+----
+sudo su - postgres
+pg_dumpall > all.sql
+psql -f all.sql
+----
 
 
 == Data manipulation tools
@@ -108,9 +182,65 @@ docker system prune -a --volumes
 ----
 
 
+== Elasticsearch
+
+
+[source,bash]
+----
+
+curl ${ES_SERVER}/_cat/indices
+
+curl ${ES_SERVER}/_cat/shards
+
+curl ${ES_SERVER}/_nodes
+curl ${ES_SERVER}/_nodes/stats
+curl ${ES_SERVER}/_nodes?filter_path=**.mlockall
+curl ${ES_SERVER}/_nodes/stats/process?filter_path=**.max_file_descriptors
+
+curl ${ES_SERVER}/_cluster/settings?include_defaults=true&flat_settings=true
+
+curl ${ES_SERVER}/_tasks?detailed&group_by=parents
+curl ${ES_SERVER}/_tasks/ariYbTAwRTGAxewNhAP-xg:289442
+
+curl ${ES_SERVER}${INDICE}/_segments
+
+curl -X POST ${ES_SERVER}${INDICE}/_flush/synced
+curl -X POST ${ES_SERVER}${INDICE}/_forcemerge?max_num_segments=1
+
+----
 
 == Git
 
+
+=== Create new remote repository from local repository
+
+.On the remote machine
+[source,bash]
+----
+sudo su - git
+cd /server/git/
+mkdir foo-project.git
+cd foo-project.git/
+git --bare init
+git config core.sharedrepository 1
+git config receive.denyNonFastforwards true
+----
+
+.On the local machine
+[source,bash]
+----
+git init
+Add the .gitignore file
+git add *
+git commit -m "My initial commit message"
+
+git remote add origin ssh://git@<SERVER_IP>/server/git/foo_project.git
+git push -u origin master
+----
+
+
+
+=== git commit 
 
 [source,bash]
 ----
@@ -119,19 +249,24 @@ git commit -m "First line" \
 ----
 
 
- 
+=== git log 
 
 [source,bash]
 ----
 git log -1
 ----
 
-
-
-
 [source,bash]
 ----
 git --no-pager log 
+----
+
+=== git archive 
+
+[source,bash]
+----
+git archive -format=zip -prefix=mon_projet-1.0/ -9 1.0 > /chemin/de/destination/mon-projet-1.0.zip
+git archive -format=tar -prefix=mon_projet-1.0/ 1.0 | gzip > /chemin/de/destination/mon-projet-1.0.tar.gz
 ----
 == Kubernetes
 
@@ -140,6 +275,22 @@ git --no-pager log
 
 === kubectl
 
+
+==== config & context
+
+[source,bash]
+----
+kubectl config view 
+
+kubectl config view --minify
+
+# context = cluster + namespace + user
+kubectl config current-context
+
+# or kubectx
+kubectl config get-contexts 
+kubectl config use-context $CONTEXT
+----
 
 [source,bash]
 ----
@@ -150,14 +301,60 @@ kubectl explain
 kubectl auth can-i
 kubectl <command> -o json/yaml
 
-kubectl config view --minify
 
 ----
+
+[source,bash]
+.Nodes
+----
+# More information about your nodes
+kubectl get nodes -o wide
+
+# List your node labels
+kubectl get nodes --show-labels
+----
+
+
 
 
 === kubectx
 
 == Network
+
+
+=== curl 
+
+[source,bash]
+----
+
+# Basic GET request
+curl <URL>
+
+# Specify the HTTP method
+curl -X <METHOD> <URL>
+
+# Include the response headers in the output
+curl -i <URL>
+
+# Set a custom header
+curl -H <HEADER> <URL>
+
+# Save the content to a file
+curl <URL> -o <FILE>
+
+# POST request - form-like
+curl -X POST -F 'name=foobar' <URL>
+
+# POST request - application/x-www-form-urlencoded
+curl -X POST -d 'name=foobar' <URL>
+
+# Specify header
+curl -X POST -H "Content-Type: application/json" -d '{"name": "foobar", "email": "foo@bar.com"}' <URL>
+
+# upload file 
+curl -X POST -F 'image=@/home/user/Pictures/wallpaper.jpg' <URL>
+----
+
 
 
 === nmap
@@ -201,6 +398,11 @@ dig orkhon.dev @1.1.1.1
 # reverse lookup
 dig -x <ip>
 ----
+
+
+=== ping 
+
+
 == openssl
 
 [source,bash]
@@ -244,7 +446,80 @@ firemon --top
 ----
 
 * https://firejail.wordpress.com/documentation-2/basic-usage/
-== Shell
+
+== Bash
+
+=== bash redirections
+
+[source,bash]
+----
+# Redirect the standard output (stdout) of cmd to a file.
+cmd > file 
+
+# Same as cmd > file. 1 is the default file descriptor (fd) for stdout.
+cmd 1> file
+
+# Redirect the standard error (stderr) of cmd to a file. 2 is the default fd for stderr.
+cmd 2> file
+
+# Append stdout of cmd to a file.
+cmd >> file
+
+# Append stderr of cmd to a file.
+cmd 2>> file
+
+# Redirect stdout and stderr of cmd to a file.
+cmd &> file
+
+# Another way to redirect both stdout and stderr of cmd to a file. 
+# This is not the same as cmd 2>&1 > file. Redirection order matters!
+cmd > file 2>&1
+
+# Discard stdout of cmd.
+cmd > /dev/null
+
+# Discard stderr of cmd.
+cmd 2> /dev/null
+
+# Discard stdout and stderr of cmd
+cmd &> /dev/null
+
+# Redirect the contents of the file to the standard input (stdin) of cmd.
+cmd < file
+
+# Redirect stdout of cmd to a file and print it to screen
+cmd | tee file
+----
+
+
+[source,bash]
+.Here-docs
+----
+# Redirect a bunch of lines to the stdin. 
+# If 'EOL' is quoted, text is treated literally. 
+# This is called a here-document.
+cmd << EOL
+line1
+line2
+EOL
+
+# Redirect a bunch of lines to the stdin and strip the leading tabs.
+cmd <<- EOL
+<tab>foo
+<tab><tab>bar
+EOL
+
+# Redirect a single line of text to the stdin of cmd. This is called a here-string.
+cmd <<< "string"
+----
+
+Source : https://github.com/pkrumins/bash-redirections-cheat-sheet 
+
+
+
+
+== Shell tools
+
 
 === ln 
 
@@ -299,7 +574,9 @@ lsof -p <pid>
 ----
 == SSH
 
-=== Generating SSH key
+=== SSH keys
+
+==== Generating SSH key
 
 [source,bash]
 ----
@@ -308,7 +585,7 @@ ssh-keygen
 # creates a private and public keys in ~/.ssh
 ----
 
-=== ssh-copy-id
+==== ssh-copy-id
 
 [source,bash]
 ----
@@ -333,17 +610,18 @@ ssh <user>@<host>
 ssh -i ~/.ssh/otherkey <user>@<host>
 ----
 
+=== Configuration
 
-=== ssh config
-
-
-
-=== sshd config
+==== ssh config
 
 
 
+==== sshd config
 
-== SOCKS proxy
+
+
+
+=== SOCKS proxy
 
 [source,bash]
 ----
