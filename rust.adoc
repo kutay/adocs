@@ -1,8 +1,11 @@
+= Rust
+:toc: left
+:sectanchors:
+:source-highlighter: highlight.js
 
 
-== Rust
 
-=== Files 
+== Files 
 
 
 [source,rust]

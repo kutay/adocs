@@ -4,5 +4,6 @@
 
 
 * link:unified.adoc[Cheatsheet]
+* link:rust.adoc[Cheatsheet Rust]
 * link:online.adoc[Online tools]
 * link:releases.adoc[Releases]
