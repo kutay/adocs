@@ -125,3 +125,14 @@ lsof -c <command>
 # or by pid
 lsof -p <pid>
 ----
+
+
+=== lscpu 
+
+Display information about the CPU architecture
+
+[source,bash]
+----
+# get number of processing units available
+nproc --all
+----
