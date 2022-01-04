@@ -4,6 +4,87 @@
 :source-highlighter: highlight.js
 
 
+== Ansible
+
+
+
+[source,yaml]
+----
+- name: Check if there is enough space
+  assert:
+    that: (ansible_mounts|selectattr("mount", "equalto", "/")|list)[0].size_available > need_space
+----
+
+== Bash
+
+=== bash redirections
+
+[source,bash]
+----
+# Redirect the standard output (stdout) of cmd to a file.
+cmd > file 
+
+# Same as cmd > file. 1 is the default file descriptor (fd) for stdout.
+cmd 1> file
+
+# Redirect the standard error (stderr) of cmd to a file. 2 is the default fd for stderr.
+cmd 2> file
+
+# Append stdout of cmd to a file.
+cmd >> file
+
+# Append stderr of cmd to a file.
+cmd 2>> file
+
+# Redirect stdout and stderr of cmd to a file.
+cmd &> file
+
+# Another way to redirect both stdout and stderr of cmd to a file. 
+# This is not the same as cmd 2>&1 > file. Redirection order matters!
+cmd > file 2>&1
+
+# Discard stdout of cmd.
+cmd > /dev/null
+
+# Discard stderr of cmd.
+cmd 2> /dev/null
+
+# Discard stdout and stderr of cmd
+cmd &> /dev/null
+
+# Redirect the contents of the file to the standard input (stdin) of cmd.
+cmd < file
+
+# Redirect stdout of cmd to a file and print it to screen
+cmd | tee file
+----
+
+
+[source,bash]
+.Here-docs
+----
+# Redirect a bunch of lines to the stdin. 
+# If 'EOL' is quoted, text is treated literally. 
+# This is called a here-document.
+cmd << EOL
+line1
+line2
+EOL
+
+# Redirect a bunch of lines to the stdin and strip the leading tabs.
+cmd <<- EOL
+<tab>foo
+<tab><tab>bar
+EOL
+
+# Redirect a single line of text to the stdin of cmd. This is called a here-string.
+cmd <<< "string"
+----
+
+Source : https://github.com/pkrumins/bash-redirections-cheat-sheet 
+
+
+
 == GCP - Google Cloud Platform
 
 === GKE 
@@ -62,6 +143,18 @@ convert -resize 25% $1 generated/$1
 # Convert svg file to pdf
 rsvg-convert -f pdf -o $1.pdf $1
 ----
+
+
+== Multimedia manipulation
+
+=== mp3wrap
+
+[source,bash]
+----
+sudo apt-get install mp3wrap
+mp3wrap output.mp3 *.mp3
+----
+
 
 == Databases
 
@@ -446,79 +539,15 @@ firemon --top
 ----
 
 * https://firejail.wordpress.com/documentation-2/basic-usage/
-
-== Bash
-
-=== bash redirections
-
-[source,bash]
-----
-# Redirect the standard output (stdout) of cmd to a file.
-cmd > file 
-
-# Same as cmd > file. 1 is the default file descriptor (fd) for stdout.
-cmd 1> file
-
-# Redirect the standard error (stderr) of cmd to a file. 2 is the default fd for stderr.
-cmd 2> file
-
-# Append stdout of cmd to a file.
-cmd >> file
-
-# Append stderr of cmd to a file.
-cmd 2>> file
-
-# Redirect stdout and stderr of cmd to a file.
-cmd &> file
-
-# Another way to redirect both stdout and stderr of cmd to a file. 
-# This is not the same as cmd 2>&1 > file. Redirection order matters!
-cmd > file 2>&1
-
-# Discard stdout of cmd.
-cmd > /dev/null
-
-# Discard stderr of cmd.
-cmd 2> /dev/null
-
-# Discard stdout and stderr of cmd
-cmd &> /dev/null
-
-# Redirect the contents of the file to the standard input (stdin) of cmd.
-cmd < file
-
-# Redirect stdout of cmd to a file and print it to screen
-cmd | tee file
-----
-
-
-[source,bash]
-.Here-docs
-----
-# Redirect a bunch of lines to the stdin. 
-# If 'EOL' is quoted, text is treated literally. 
-# This is called a here-document.
-cmd << EOL
-line1
-line2
-EOL
-
-# Redirect a bunch of lines to the stdin and strip the leading tabs.
-cmd <<- EOL
-<tab>foo
-<tab><tab>bar
-EOL
-
-# Redirect a single line of text to the stdin of cmd. This is called a here-string.
-cmd <<< "string"
-----
-
-Source : https://github.com/pkrumins/bash-redirections-cheat-sheet 
-
-
-
-
 == Shell tools
+
+=== seq
+
+[source,bash]
+----
+# pad numbers
+seq -w 01 10
+----
 
 
 === ln 
@@ -571,6 +600,17 @@ lsof -c <command>
 
 # or by pid
 lsof -p <pid>
+----
+
+
+=== lscpu 
+
+Display information about the CPU architecture
+
+[source,bash]
+----
+# get number of processing units available
+nproc --all
 ----
 == SSH
 

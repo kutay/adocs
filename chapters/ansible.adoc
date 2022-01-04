@@ -1,0 +1,12 @@
+
+
+== Ansible
+
+
+
+[source,yaml]
+----
+- name: Check if there is enough space
+  assert:
+    that: (ansible_mounts|selectattr("mount", "equalto", "/")|list)[0].size_available > need_space
+----
