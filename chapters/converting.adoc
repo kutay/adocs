@@ -16,3 +16,15 @@ convert -resize 25% $1 generated/$1
 # Convert svg file to pdf
 rsvg-convert -f pdf -o $1.pdf $1
 ----
+
+
+== Multimedia manipulation
+
+=== mp3wrap
+
+[source,bash]
+----
+sudo apt-get install mp3wrap
+mp3wrap output.mp3 *.mp3
+----
+
