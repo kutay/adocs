@@ -1,8 +1,13 @@
 #!/bin/bash
 
+set -x 
+
 trash-put *.png
 trash-put *.svg
 
 
-packetdiag *.diag
-packetdiag -Tsvg  *.diag
+find -name "*.diag" -exec packetdiag {} \;
+find -name "*.diag" -exec packetdiag -Tsvg {} \;
+
+
+set +x
