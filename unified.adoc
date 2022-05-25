@@ -757,3 +757,57 @@ multipass ls
 multipass exec <VM_NAME> -- <COMMAND>
 
 ----
+
+
+== Wireguard
+
+[source,bash]
+.Generating private and public keys
+----
+wg genkey | tee privatekey | wg pubkey > publickey
+----
+
+
+
+[source,bash]
+.Configuring interface on each peer/host
+----
+ip link add wg0 type wireguard
+
+# my ip on the wireguard network
+ip addr add 172.16.0.99/24 dev wg0
+
+# define the listening port
+wg set wg0 private-key ./privatekey listen-port 55234
+
+ip link set wg0 up
+
+# check status 
+wg
+----
+
+
+[source,bash]
+.Adding the other peer
+----
+wg set wg0 peer 8pfWwwPK8R+Qe/fuN5FZ0P2ddngWd8s79sOQw5Q7SXE= allowed-ips 172.16.0.0/16 endpoint 192.168.1.107:55123
+
+wg set wg0 peer cjmyZf4c+6U3pD2QT+6Bxkjj9qzU8EePjc8dSeuXvWs= allowed-ips 172.16.0.0/16 endpoint 192.168.1.106:55234
+----
+
+
+[source,bash]
+.Persist the interface configuration
+----
+wg showconf wg0 > /etc/wireguard/wg0.conf
+cp *key /etc/wireguard/
+chmod 600 /etc/wireguard/*
+
+# easily start or stop
+wg-quick up wg0
+wg-quick down wg0
+
+# persist on reboot
+systemctl enable wg-quick@wg0.service
+----
+
