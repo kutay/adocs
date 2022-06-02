@@ -1,6 +1,10 @@
+= Docs
+:toc: left
+:sectanchors:
+:source-highlighter: highlight.js
 
 
-== File manipulation 
+== Images 
 
 === Image manipulation
 
@@ -9,7 +13,7 @@
 convert -resize 25% $1 generated/$1
 ----
 
-=== PDF related
+== PDF related
 
 [source,bash]
 ----
@@ -18,7 +22,7 @@ rsvg-convert -f pdf -o $1.pdf $1
 ----
 
 
-== Multimedia manipulation
+== Audio
 
 === mp3wrap
 
@@ -27,4 +31,6 @@ rsvg-convert -f pdf -o $1.pdf $1
 sudo apt-get install mp3wrap
 mp3wrap output.mp3 *.mp3
 ----
+
+== ffmpeg
 

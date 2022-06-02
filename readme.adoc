@@ -3,7 +3,9 @@
 :sectanchors:
 
 
-* link:unified.adoc[Cheatsheet]
+* link:unified-devops.adoc[Cheatsheet DevOps]
 * link:rust.adoc[Cheatsheet Rust]
+* link:unified-tools.adoc[Cheatsheet Tools]
+
 * link:online.adoc[Online tools]
 * link:releases.adoc[Releases]

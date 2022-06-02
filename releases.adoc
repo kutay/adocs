@@ -56,6 +56,16 @@ They are working (04/2020) on encrypting VPC traffic within the boundaries of th
 * 14/08/2020 : Kubernetes - Introducing Hierarchical Namespaces
 ** https://kubernetes.io/blog/2020/08/14/introducing-hierarchical-namespaces/
 
+
+
+
+
+
+
+
+
+
+
 == Monitoring
 
 * 21/04/2021 : Vector 0.13.0
@@ -67,13 +77,24 @@ They are working (04/2020) on encrypting VPC traffic within the boundaries of th
 ** JSON and YAML config formats are accepted
 
 
+
+
+
+
+
+
+
 == Automation
 
+=== Terraform
 
 * 22/06/2020 : Announcing Terraform 0.13 Beta
 ** https://www.hashicorp.com/blog/announcing-the-terraform-0-13-beta/
 ** count and for_each for modules
 ** depends_on for modules
+
+
+=== Ansible
 
 * 14/11/2019 : Ansible 1.10 brings Collections
 ** https://www.ansible.com/blog/getting-started-with-ansible-collections
