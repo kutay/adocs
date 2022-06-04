@@ -16,11 +16,17 @@
 * https://cuckoosandbox.org/
 
 
-== Diagrams
+== Design 
+
+=== Diagrams
 
 * https://googlecloudcheatsheet.withgoogle.com/architecture
 
 
+=== Icons
+
+* https://akveo.github.io/eva-icons/#/
+* https://blobsicons.bargush.me/
 
 == Kubernetes 
 
@@ -32,8 +38,12 @@
 * https://explainshell.com/explain?cmd=tar%20zcf%20-%20some-dir%20%7C%20ssh%20some-server%20%22cd%20/%3B%20tar%20xvzf%20-%22
 
 
+== Tools
+
+* https://www.optimizeimages.com/
 
 
 == Articles 
 
 * https://smallstep.com/blog/everything-pki/
+* https://goteleport.com/blog/comparing-ssh-keys/
