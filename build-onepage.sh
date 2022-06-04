@@ -33,3 +33,4 @@ asciidoctor unified-tools.adoc
 asciidoctor rust.adoc
 
 asciidoctor readme.adoc
+asciidoctor webbooks.adoc

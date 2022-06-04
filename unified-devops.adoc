@@ -125,6 +125,32 @@ gcloud iam roles create [ROLE-ID] --project [PROJECT-ID] \
 
 
 
+=== Cloud Shell
+
+[source,bash]
+----
+
+gcloud cloud-shell ssh
+
+# Sends OAuth credentials to the current Cloud Shell session
+gcloud cloud-shell ssh --authorize-session
+
+# Copy a file 
+gcloud cloud-shell scp cloudshell:~/data.txt localhost:~data.txt
+
+# Get the command to mount your Cloud Shell home directory
+gcloud cloud-shell get-mount-command ~/my-cloud-shell
+----
+
+
+
+
+
+
+
+
+
+
 
 == Databases
 
@@ -689,6 +715,14 @@ journalctl --vacuum-time=2d
 
 # flush journalctl logs to keep last 500M
 journalctl --vacuum-size=500M
+----
+
+== Terraform
+
+.Manipulating the output
+[source,bash]
+----
+terraform output -raw <FIELD>
 ----
 
 == Virtualization

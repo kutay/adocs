@@ -1,0 +1,8 @@
+
+== Terraform
+
+.Manipulating the output
+[source,bash]
+----
+terraform output -raw <FIELD>
+----

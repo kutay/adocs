@@ -2,6 +2,38 @@
 :toc: left
 :sectanchors:
 
-== SSL
+
+== Security
+
+
+=== SSL
 
 * https://ssl-config.mozilla.org/
+
+
+=== Malware
+
+* https://cuckoosandbox.org/
+
+
+== Diagrams
+
+* https://googlecloudcheatsheet.withgoogle.com/architecture
+
+
+
+== Kubernetes 
+
+* https://k8syaml.com/
+
+
+== Shell
+
+* https://explainshell.com/explain?cmd=tar%20zcf%20-%20some-dir%20%7C%20ssh%20some-server%20%22cd%20/%3B%20tar%20xvzf%20-%22
+
+
+
+
+== Articles 
+
+* https://smallstep.com/blog/everything-pki/
