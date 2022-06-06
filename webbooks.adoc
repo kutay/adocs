@@ -9,11 +9,14 @@
 * Operating Systems: Three easy pieces
 ** https://pages.cs.wisc.edu/~remzi/OSTEP/
 
+== Networking 
+
+* https://beej.us/guide/bgnet/html/
 
 == Linux 
 
 * https://github.com/0xAX/linux-insides/blob/master/SUMMARY.md
-
+* https://debian-handbook.info/browse/stable/
 
 
 == Rust
@@ -36,3 +39,6 @@
 
 
 * https://github.com/codecrafters-io/build-your-own-x
+
+
+* High Performance Browser Networking : https://hpbn.co/
