@@ -1,0 +1,54 @@
+
+
+== Linux
+
+=== File permissions and attributes
+
+==== chmod 
+
+[source,bash]
+----
+# Deny permissions to group
+chmod g= Documents
+
+# Set group permissions to read and execute
+chmod g=rx Documents
+
+# Set group and other permissions to read and execute
+chmod go=rx Documents
+
+# Add write permission to group
+chmod g+w foobar
+
+# Remove write permission to all
+chmod a-w foobar
+
+# Recursively set read and executable permissions 
+# By using -X, we only set executable permission on directories
+chmod -R a+rX foobar
+
+# We can use numeric notation
+chmod 700 foobar
+----
+
+==== stat 
+
+[source,bash]
+----
+stat -c %a <file>
+----
+
+==== namei
+
+[source,bash]
+----
+# view permissions along the whole path
+namei -l /home/john/.ssh
+----
+
+==== chflags
+
+[source,bash]
+----
+sudo chflags schg /etc/hosts
+----
