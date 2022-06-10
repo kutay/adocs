@@ -366,6 +366,41 @@ git --no-pager log
 git archive -format=zip -prefix=mon_projet-1.0/ -9 1.0 > /chemin/de/destination/mon-projet-1.0.zip
 git archive -format=tar -prefix=mon_projet-1.0/ 1.0 | gzip > /chemin/de/destination/mon-projet-1.0.tar.gz
 ----
+
+
+=== git branch
+
+
+[source,bash]
+----
+git branch            # list local branches
+git branch -c <name>  # create a branch
+git branch -d <name>  # delete a branch, if safe
+git branch -D <name>  # delete a branch over git's concerns
+----
+
+
+=== git tags
+
+[source,bash]
+----
+git tag           # list tags
+git tag -a <name> # create a new tag
+----
+
+
+
+=== git checkout & git switch 
+
+[source,bash]
+----
+git checkout <commit hash>  # checks out a particular commit
+git checkout <tag name>     # checks out a particular tag
+git checkout <branch name>  # checks out a particular branch
+
+git switch <branch>
+----
+
 == Kubernetes
 
 === kubeadm
