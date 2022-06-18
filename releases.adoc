@@ -14,10 +14,6 @@
 
 === 2020
 
-* 08/12/2020 : Deno 1.6
-** Deno can now build self contained/standalone binaries : use "deno compile"
-** build-in Deno Language Server
-** https://deno.com/blog/v1.6
 
 
 * 15/05/2020 : Kafka will remove ZooKeeper dependency
@@ -26,13 +22,55 @@
 
 
 
+
+
+
+
 == AWS
+
+
+
+
+* 21/04/2022 : Amazon Aurora Serverless v2 is GA
+** https://aws.amazon.com/blogs/aws/amazon-aurora-serverless-v2-is-generally-available-instant-scaling-for-demanding-workloads/
+* 20/04/2022 : Introducing EKS blueprints
+** https://aws.amazon.com/blogs/containers/bootstrapping-clusters-with-eks-blueprints/
+* 06/04/2022 : Announcing AWS Lambda Function URLs
+** https://aws.amazon.com/pt/blogs/aws/announcing-aws-lambda-function-urls-built-in-https-endpoints-for-single-function-microservices/
+
 
 * 10/06/2020 : Introducting AWS CodeArtifact
 ** AWS CodeArtifact is a fully managed artifact repository service for maven, PyPi, npm packages
 
 
+
 == GCP
+
+
+* 03/02/2022 : Serverless Spark
+** https://cloud.google.com/blog/products/data-analytics/simplify-data-processing-and-data-science-jobs-with-spark-on-google-cloud
+
+* 15/11/2021 : Introducing Managed Service for Prometheus
+** https://cloud.google.com/blog/products/operations/introducing-google-cloud-managed-service-for-prometheus
+
+* 30/08/2021 : GCP Cloud Functions can have min instances to reduce cold starts
+** https://cloud.google.com/blog/products/serverless/cloud-functions-supports-min-instances
+
+* 29/04/2021
+** GCP - [[GKE Gateway controller]]
+
+* 24/02/2021 : GCP announces GKE autopilot, an opiniated and managed GKE
+** https://www.youtube.com/watch?v=_JKsv2BtAnY
+** https://about.gitlab.com/blog/2021/02/24/gitlab-gke-autopilot/
+
+* 16/02/2021 : GCP announces [[GKE multi-cluster services]]
+** https://cloud.google.com/blog/products/containers-kubernetes/introducing-gke-multi-cluster-services
+
+
+
+
+
+
 
 
 * 08/09/2020 : Google Cloud API Gateway is now available in public beta
@@ -46,7 +84,31 @@ GCP encrypts VPC traffic between all data centers (Encryption in Transit in Goog
 They are working (04/2020) on encrypting VPC traffic within the boundaries of the data centers
 
 
-== Kubernetes 
+
+== Cloud, PaaS, ...
+
+=== Cloudflare
+
+* 17/11/2021 : Cloudflare Pages Goes Full Stack
+** https://blog.cloudflare.com/cloudflare-pages-goes-full-stack
+
+
+
+
+
+
+
+== Containers
+
+=== Docker
+
+=== Podman
+
+* 17/02/2022 : Podman 4.0.0
+** https://podman.io/releases/2022/02/22/podman-release-v4.0.0.html
+
+
+=== Kubernetes 
 
 * 08/12/2020 : Kubernetes 1.20: The Raddest Release
 ** Volume Snapshot Operations Goes Stable
@@ -61,12 +123,15 @@ They are working (04/2020) on encrypting VPC traffic within the boundaries of th
 
 
 
-
-
-
-
-
 == Monitoring
+
+=== Prometheus
+
+* 16/11/2021 : Introducing Prometheus Agent Mode
+** https://prometheus.io/blog/2021/11/16/agent/
+
+
+=== Vector 
 
 * 21/04/2021 : Vector 0.13.0
 ** introduces "vector tap" subcommand 
@@ -100,11 +165,33 @@ They are working (04/2020) on encrypting VPC traffic within the boundaries of th
 ** https://www.ansible.com/blog/getting-started-with-ansible-collections
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 == Frontend
+
+=== Vue.js
+
+
+
+
+
+
+
 
 
 == Proxy & Service mesh
 
+=== HAProxy
 
 * 13/05/2021 : HAProxy 2.4
 ** new features : 
@@ -115,20 +202,20 @@ They are working (04/2020) on encrypting VPC traffic within the boundaries of th
 *** server timeouts that you can change on the fly
 ** https://www.haproxy.com/blog/announcing-haproxy-2-4/
 
-
-* 07/12/2020 : Flagger 1.4.0
-** Add support for Traefik ingress controller
-
+=== Envoy
 
 * 13/08/2020 : Envoy 1.15
 ** adds Postgres extension
 ** https://www.cncf.io/blog/2020/08/13/envoy-1-15-introduces-a-new-postgres-extension-with-monitoring-support/
 
+=== Linkerd
 
 * 09/06/2020 : Announcing Linkerd 2.8
 ** https://linkerd.io/2020/06/09/announcing-linkerd-2.8/
 ** multi-cluster extension 
 *** does not work yet on EKS
+
+=== Istio 
 
 * 21/05/2020 : Announcing Istio 1.6
 ** Simplifying Istio even more
@@ -138,3 +225,24 @@ They are working (04/2020) on encrypting VPC traffic within the boundaries of th
 ** Microservices to monolith
 ** https://istio.io/latest/news/releases/1.5.x/announcing-1.5/
 
+
+=== Flagger
+
+* 07/12/2020 : Flagger 1.4.0
+** Add support for Traefik ingress controller
+
+
+
+
+== Languages 
+
+=== Rust
+
+
+
+=== Deno
+
+* 08/12/2020 : Deno 1.6
+** Deno can now build self contained/standalone binaries : use "deno compile"
+** build-in Deno Language Server
+** https://deno.com/blog/v1.6

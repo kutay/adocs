@@ -54,3 +54,16 @@
 
 * https://smallstep.com/blog/everything-pki/
 * https://goteleport.com/blog/comparing-ssh-keys/
+
+
+
+
+
+== Unclassified
+
+* Tools for better thinking : https://untools.co/
+
+* https://github.com/bregman-arie/devops-exercises
+
+
+* https://incident.io/guide/
