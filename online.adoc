@@ -8,6 +8,7 @@
 
 * AWS Security Maturity Model : https://maturitymodel.security.aws.dev/en/model/
 
+* https://gcp.permissions.cloud/
 
 
 == Security
