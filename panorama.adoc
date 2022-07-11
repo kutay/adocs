@@ -56,10 +56,10 @@
 |
 |https://github.com/edrevo/suspicious-pods
 
-|xxx
+|Pixie
+|Monitoring
 |
-|
-|
+|https://github.com/pixie-io/pixie
 
 |xxx
 |
@@ -146,6 +146,24 @@ https://github.com/Combodo/iTop
 A simple, web based IT Service Management tool 
 
 
+
+.Load Testing 
+
+https://github.com/fcsonline/drill
+Drill is an HTTP load testing application written in Rust 
+
+
+.VueJS
+
+https://github.com/primefaces/primevue
+
+
+
+.Diagrams
+
+https://github.com/jwilber/roughViz
+
+
 == Uncategorized
 
 https://gitlab.com/cyber5k/mistborn
@@ -163,3 +181,30 @@ https://github.com/kubeovn/kube-ovn
 
 https://github.com/espanso/espanso
  Cross-platform Text Expander written in Rust 
+
+
+
+
+https://github.com/ncrocfer/whatportis
+
+
+
+https://github.com/kellyjonbrazil/jc
+CLI tool and python library that converts the output of popular command-line tools and file-types to JSON, YAML, or Dictionaries. This allows piping of output to tools like jq and simplifying automation scripts. 
+
+
+
+
+https://www.pomerium.com/docs/install
+https://github.com/oauth2-proxy/oauth2-proxy
+https://github.com/dexidp/dex/
+https://github.com/kuadrant/authorino
+
+https://github.com/panva/jose
+
+
+https://github.com/louislam/uptime-kuma
+
+
+https://github.com/sullo/nikto
+
