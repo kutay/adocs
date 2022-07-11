@@ -35,6 +35,7 @@
 
 * https://akveo.github.io/eva-icons/#/
 * https://blobsicons.bargush.me/
+* https://tablericons.com/
 
 == Kubernetes 
 
@@ -44,6 +45,8 @@
 == Shell
 
 * https://explainshell.com/explain?cmd=tar%20zcf%20-%20some-dir%20%7C%20ssh%20some-server%20%22cd%20/%3B%20tar%20xvzf%20-%22
+* https://github.com/dylanaraps/pure-bash-bible
+
 
 
 == Tools
@@ -58,6 +61,15 @@
 
 
 
+== Rust 
+
+* https://github.com/RustCrypto/hashes
+
+
+== Git
+
+* https://ohshitgit.com/
+* https://learngitbranching.js.org/
 
 
 == Unclassified
@@ -68,3 +80,9 @@
 
 
 * https://incident.io/guide/
+
+* https://spftoolbox.com/
+
+
+
+
