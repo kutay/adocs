@@ -22,7 +22,7 @@
 
 == Kubernetes tools
 
-[cols="1,1,1"]
+[cols="1,1,1,1"]
 |===
 |Name |Category |Description |Link
 
