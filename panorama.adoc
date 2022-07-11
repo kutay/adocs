@@ -10,4 +10,156 @@
 |MetalLB
 |MetalLB is a load-balancer implementation for bare metal Kubernetes clusters, using standard routing protocols
 |https://github.com/metallb/metallb
+
+
+|SpiderFoot
+|open source intelligence (OSINT) automation tool
+|https://github.com/smicallef/spiderfoot
+
 |===
+
+
+
+== Kubernetes tools
+
+[cols="1,1,1"]
+|===
+|Name |Category |Description |Link
+
+|kubectl-rolesum
+|RBAC
+|Summarize RBAC roles for the specified subject (ServiceAccount, User and Group)
+|https://github.com/Ladicle/kubectl-rolesum
+
+|sloop
+|
+|
+|https://github.com/salesforce/sloop
+
+|kubectl-neat
+|
+|Clean up Kubernetes yaml and json output to make it readable 
+|https://github.com/itaysk/kubectl-neat
+
+|dbench
+|Performance
+|Benchmark Kubernetes persistent disk volumes with fio: Read/write IOPS, bandwidth MB/s and latency 
+|https://github.com/leeliu/dbench
+
+|kubernetes-diff-logger
+|Monitoring
+|Logs updates to Kubernetes Objects for storing and querying with Loki 
+|https://github.com/grafana/kubernetes-diff-logger
+
+|suspicious-pods
+|
+|
+|https://github.com/edrevo/suspicious-pods
+
+|xxx
+|
+|
+|
+
+|xxx
+|
+|
+|
+
+
+
+|===
+
+
+== Categorized (wip)
+
+.Network monitoring
+
+https://github.com/elesiuta/picosnitch
+Monitor network traffic per executable using BPF 
+
+https://github.com/evilsocket/opensnitch
+OpenSnitch is a GNU/Linux port of the Little Snitch application firewall 
+
+
+
+.GPS 
+
+https://github.com/cpesch/RouteConverter
+The popular GPS conversion and editing tool 
+
+
+
+.Pentesting
+
+https://github.com/liamg/traitor
+Automatic Linux privesc via exploitation of low-hanging fruit e.g. gtfobins, pwnkit, dirty pipe, +w docker.sock 
+
+
+.FinOps
+
+https://github.com/kubecost/opencost
+your favorite open source cost monitoring tool for Kubernetes
+
+https://www.infracost.io/
+
+
+.Local Kubernetes Clusters
+
+https://microk8s.io/
+The lightweight Kubernetes
+
+https://k3s.io/
+The certified Kubernetes distribution built for IoT & Edge computing
+
+https://github.com/k0sproject/k0s
+k0s is an all-inclusive Kubernetes distribution, which is configured with all of the features needed to build a Kubernetes cluster and packaged as a single binary for ease of use.
+
+
+.Homelab
+
+https://www.cloudron.io/index.html
+Complete solution for running apps on your own server
+
+
+.APM
+
+https://github.com/pinpoint-apm/pinpoint
+APM, (Application Performance Management) tool for large-scale distributed systems. 
+
+
+
+.HTTP proxies
+
+https://github.com/stripe/smokescreen
+A simple HTTP proxy that fogs over naughty URLs 
+
+https://hetty.xyz/docs/
+
+
+.IT asset management
+
+https://github.com/snipe/snipe-it
+A free open source IT asset/license management system 
+
+https://github.com/Combodo/iTop
+A simple, web based IT Service Management tool 
+
+
+== Uncategorized
+
+https://gitlab.com/cyber5k/mistborn
+
+* https://github.com/litmuschaos/litmus
+* https://github.com/cruise-automation/k-rail
+
+
+
+https://goauthentik.io/
+
+
+
+https://github.com/kubeovn/kube-ovn
+
+https://github.com/espanso/espanso
+ Cross-platform Text Expander written in Rust 
