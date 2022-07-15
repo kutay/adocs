@@ -208,3 +208,15 @@ https://github.com/louislam/uptime-kuma
 
 https://github.com/sullo/nikto
 
+
+
+dug : powerful global DNS propagation checker
+https://github.com/unfrl/dug
+
+hexyl : is a simple hex viewer for the terminal
+https://github.com/sharkdp/hexyl
+
+pwru : is an eBPF-based tool for tracing network packets in the Linux kernel with advanced filtering capabilities
+https://github.com/cilium/pwru
+
+

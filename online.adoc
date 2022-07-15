@@ -1,27 +1,62 @@
-= Online tools
+= Online
 :toc: left
 :sectanchors:
 
 
+== Online tools
 
-== Cloud 
+=== Cloud 
 
 * AWS Security Maturity Model : https://maturitymodel.security.aws.dev/en/model/
 
-* https://gcp.permissions.cloud/
+* GCP permissions : https://gcp.permissions.cloud/
 
 
-== Security
+
+=== Kubernetes 
+
+* YAML generator : https://k8syaml.com/
 
 
-=== SSL
+=== Compilers
+
+* https://godbolt.org/
+
+=== DNS
+
+* https://dnsape.com/
+* https://spftoolbox.com/
+
+=== Security
+
+==== SSL
 
 * https://ssl-config.mozilla.org/
+* https://badssl.com/
+* https://github.com/F5-Labs/cryptonice
+** scan and report on the configuration of SSL/TLS for your internet or internal facing web services
 
-
-=== Malware
+==== Malware
 
 * https://cuckoosandbox.org/
+
+
+
+=== Shell 
+
+* https://explainshell.com/explain?cmd=tar%20zcf%20-%20some-dir%20%7C%20ssh%20some-server%20%22cd%20/%3B%20tar%20xvzf%20-%22
+
+
+
+=== Various
+
+* https://www.optimizeimages.com/
+* https://gchq.github.io/CyberChef/
+
+
+
+
+
 
 
 == Design 
@@ -37,52 +72,53 @@
 * https://blobsicons.bargush.me/
 * https://tablericons.com/
 
-== Kubernetes 
-
-* https://k8syaml.com/
-
-
-== Shell
-
-* https://explainshell.com/explain?cmd=tar%20zcf%20-%20some-dir%20%7C%20ssh%20some-server%20%22cd%20/%3B%20tar%20xvzf%20-%22
-* https://github.com/dylanaraps/pure-bash-bible
 
 
 
-== Tools
-
-* https://www.optimizeimages.com/
 
 
-== Articles 
+== Exercises
+
+* https://github.com/bregman-arie/devops-exercises
+
+
+== Articles
+
+* Bash
+** https://github.com/dylanaraps/pure-bash-bible
+
+* Rust
+** https://github.com/RustCrypto/hashes
 
 * https://smallstep.com/blog/everything-pki/
 * https://goteleport.com/blog/comparing-ssh-keys/
 
 
 
-== Rust 
-
-* https://github.com/RustCrypto/hashes
 
 
-== Git
 
-* https://ohshitgit.com/
-* https://learngitbranching.js.org/
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
 
 == Unclassified
 
 * Tools for better thinking : https://untools.co/
 
-* https://github.com/bregman-arie/devops-exercises
-
-
 * https://incident.io/guide/
 
-* https://spftoolbox.com/
-
-
-
-
+* https://ohshitgit.com/
+* https://learngitbranching.js.org/

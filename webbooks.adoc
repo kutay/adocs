@@ -9,9 +9,15 @@
 * Operating Systems: Three easy pieces
 ** https://pages.cs.wisc.edu/~remzi/OSTEP/
 
+* https://www.memorymanagement.org
+
+
+
 == Networking 
 
 * https://beej.us/guide/bgnet/html/
+
+
 
 == Linux 
 
@@ -19,9 +25,18 @@
 * https://debian-handbook.info/browse/stable/
 
 
+
 == Rust
 
 * https://bfnightly.bracketproductions.com/rustbook/
+
+
+
+== Kubernetes
+
+* https://github.com/omerbsezer/Fast-Kubernetes
+
+
 
 
 
@@ -42,3 +57,5 @@
 
 
 * High Performance Browser Networking : https://hpbn.co/
+
+https://github.com/devsecops/awesome-devsecops
