@@ -15,6 +15,10 @@ docker build -f <FILENAME> .
 # Build and tag your image
 docker build -t <TAG> .
 
+# Generate SBOM
+docker build --sbom=true .
+docker build --sbom=true --output type=local,dest=out .
+
 ----
 
 [source,bash]
