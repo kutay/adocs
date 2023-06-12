@@ -1,0 +1,17 @@
+
+
+== Velero
+
+[source,bash]
+----
+velero get backup-locations
+velero get snapshot-locations
+
+velero get schedules
+
+velero get backups
+
+velero restore create --from-backup <BACKUP_NAME> --include-namespaces <K8S_NAMESPACE> --namespace-mappings <K8S_NAMESPACE>:<K8S_NAMESPACE_NEW>
+
+velero restore logs <RESTORE_NAME>
+----
