@@ -18,6 +18,31 @@ sqlite3 sqlite.db '.read create.sql'
 
 === PostgreSQL
 
+==== Connect
+
+.Connect to instance
+[source,bash]
+----
+psql --username postgres -h localhost
+psql --host "XXX" --username "postgres" --dbname "semarchy_repository"
+----
+
+==== Basic commands
+
+[source,bash]
+----
+# list databases
+\l
+\l+
+
+# connect to database
+\c <database>
+
+# list tables
+\dt 
+
+----
+
 ==== Manage users 
 
 .How to list users?
@@ -36,6 +61,15 @@ createuser username
 psql
 \password username # change password
 ----
+
+
+==== Maintenance
+
+[source,bash]
+----
+vacuum verbose
+----
+
 
 
 ==== Backup and Restore

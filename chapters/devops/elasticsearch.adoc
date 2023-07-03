@@ -5,7 +5,15 @@
 [source,bash]
 ----
 
+# List all indices
 curl ${ES_SERVER}/_cat/indices
+#   Include column headings
+curl ${ES_SERVER}/_cat/indices?v
+#   Sorted by indice name
+curl ${ES_SERVER}/_cat/indices?s=index
+#   Display size as mb
+curl ${ES_SERVER}/_cat/indices?bytes=mb
+
 
 curl ${ES_SERVER}/_cat/shards
 

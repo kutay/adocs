@@ -171,6 +171,31 @@ sqlite3 sqlite.db '.read create.sql'
 
 === PostgreSQL
 
+==== Connect
+
+.Connect to instance
+[source,bash]
+----
+psql --username postgres -h localhost
+psql --host "XXX" --username "postgres" --dbname "semarchy_repository"
+----
+
+==== Basic commands
+
+[source,bash]
+----
+# list databases
+\l
+\l+
+
+# connect to database
+\c <database>
+
+# list tables
+\dt 
+
+----
+
 ==== Manage users 
 
 .How to list users?
@@ -189,6 +214,15 @@ createuser username
 psql
 \password username # change password
 ----
+
+
+==== Maintenance
+
+[source,bash]
+----
+vacuum verbose
+----
+
 
 
 ==== Backup and Restore
@@ -244,6 +278,10 @@ docker build -f <FILENAME> .
 # Build and tag your image
 docker build -t <TAG> .
 
+# Generate SBOM
+docker build --sbom=true .
+docker build --sbom=true --output type=local,dest=out .
+
 ----
 
 [source,bash]
@@ -280,13 +318,22 @@ docker system prune -a --volumes
 dockerd --experimental --add-runtime="youki=$(pwd)/youki" # run in the youki directory
 docker run -it --rm --runtime youki busybox   # run a container
 ----
+
 == Elasticsearch
 
 
 [source,bash]
 ----
 
+# List all indices
 curl ${ES_SERVER}/_cat/indices
+#   Include column headings
+curl ${ES_SERVER}/_cat/indices?v
+#   Sorted by indice name
+curl ${ES_SERVER}/_cat/indices?s=index
+#   Display size as mb
+curl ${ES_SERVER}/_cat/indices?bytes=mb
+
 
 curl ${ES_SERVER}/_cat/shards
 
@@ -812,6 +859,23 @@ journalctl --vacuum-size=500M
 [source,bash]
 ----
 terraform output -raw <FIELD>
+----
+
+
+== Velero
+
+[source,bash]
+----
+velero get backup-locations
+velero get snapshot-locations
+
+velero get schedules
+
+velero get backups
+
+velero restore create --from-backup <BACKUP_NAME> --include-namespaces <K8S_NAMESPACE> --namespace-mappings <K8S_NAMESPACE>:<K8S_NAMESPACE_NEW>
+
+velero restore logs <RESTORE_NAME>
 ----
 
 == Virtualization
