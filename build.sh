@@ -34,3 +34,5 @@ asciidoctor rust.adoc
 
 asciidoctor readme.adoc
 asciidoctor webbooks.adoc
+
+mv *.html html/

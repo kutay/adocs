@@ -220,3 +220,29 @@ pwru : is an eBPF-based tool for tracing network packets in the Linux kernel wit
 https://github.com/cilium/pwru
 
 
+== Categorized
+
+
+
+=== Networks
+
+.DNS
+
+[horizontal]
+dug:: powerful global DNS propagation checker +
+(https://github.com/unfrl/dug)
+
+
+=== Monitoring
+
+=== Security 
+
+=== Cloud 
+
+.Cloud 
+
+[horizontal]
+cloudquery:: transforms your cloud infrastructure into queryable SQL tables for easy monitoring, governance and security 
+(https://github.com/cloudquery/cloudquery)
+
+=== Kubernetes
