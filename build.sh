@@ -9,6 +9,7 @@ cat << EOF > unified-devops.adoc
 :source-highlighter: highlight.js
 EOF
 cat chapters/devops/*.adoc >> unified-devops.adoc
+
 cat << EOF > unified-tools.adoc
 = Docs
 :toc: left
@@ -34,5 +35,7 @@ asciidoctor rust.adoc
 
 asciidoctor readme.adoc
 asciidoctor webbooks.adoc
+asciidoctor panorama.adoc
 
+mkdir -p html
 mv *.html html/

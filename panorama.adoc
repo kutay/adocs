@@ -3,20 +3,137 @@
 :sectanchors:
 
 
-[cols="1,1,1"]
-|===
-|Name |Description |Link
 
+
+
+[cols="1,1,1,1,1"]
+|===
+|Stars |Category |Name |Description |Link
+
+|
+|
 |MetalLB
 |MetalLB is a load-balancer implementation for bare metal Kubernetes clusters, using standard routing protocols
 |https://github.com/metallb/metallb
 
 
+|
+|
 |SpiderFoot
 |open source intelligence (OSINT) automation tool
 |https://github.com/smicallef/spiderfoot
 
+
+|
+|Pentesting
+|Traitor
+|Automatic Linux privesc via exploitation of low-hanging fruit e.g. gtfobins, pwnkit, dirty pipe, +w docker.sock 
+|https://github.com/liamg/traitor
+
+
+|
+|APM
+|Pinpoint
+|APM, (Application Performance Management) tool for large-scale distributed systems. 
+|https://github.com/pinpoint-apm/pinpoint
+
+
+|⭐
+|HTTP Proxy
+|Hetty
+|HTTP toolkit for security research
+|https://hetty.xyz/docs/
+
+
+|⭐
+|
+|cloudquery
+|transforms your cloud infrastructure into queryable SQL tables for easy monitoring, governance and security
+|https://github.com/cloudquery/cloudquery
+
+
 |===
+
+
+
+
+== Lists
+
+
+.Monitoring 
+
+[horizontal]
+ElastAlert:: XXX
+(https://elastalert.readthedocs.io/en/latest/)
+
+.Frontend
+
+[horizontal]
+PrimeVue:: rich set of open source UI Components for Vue
+(https://github.com/primefaces/primevue)
+
+roughViz.js:: reusable JavaScript library for creating sketchy/hand-drawn styled charts in the browser
+(https://github.com/jwilber/roughViz)
+
+
+.Networking 
+
+[horizontal]
+Picosnitch:: Monitor network traffic per executable using BPF 
+(https://github.com/elesiuta/picosnitch)
+
+OpenSnitch:: GNU/Linux port of the Little Snitch application firewall 
+(https://github.com/evilsocket/opensnitch)
+
+
+.Testing 
+
+[horizontal]
+
+Drill:: Drill is an HTTP load testing application written in Rust 
+(https://github.com/fcsonline/drill)
+
+
+LitmusChaos:: Open Source Chaos Engineering Platform
+(https://github.com/litmuschaos/litmus)
+
+
+.Kubernetes
+
+[horizontal]
+sloop:: https://github.com/salesforce/sloop
+
+.WIP
+
+[horizontal]
+Mistborn:: A secure platform for easily standing up and managing your own cloud services: including firewall, ad-blocking, and multi-factor WireGuard VPN access 
+(https://gitlab.com/cyber5k/mistborn)
+
+Kube-OVN:: cloud-native network orchestration system 
+(https://github.com/kubeovn/kube-ovn)
+
+cloudquery:: transforms your cloud infrastructure into queryable SQL tables for easy monitoring, governance and security 
+(https://github.com/cloudquery/cloudquery)
+
+dug:: powerful global DNS propagation checker +
+(https://github.com/unfrl/dug)
+
+
+
+Cloudron:: Complete solution for running apps on your own server
+(https://www.cloudron.io/index.html)
+
+
+RouteConverter:: The popular GPS conversion and editing tool 
+(https://github.com/cpesch/RouteConverter)
+
+snipe-it:: A free open source IT asset/license management system 
+(https://github.com/snipe/snipe-it)
+
+iTop:: A simple, web based IT Service Management tool 
+(https://github.com/Combodo/iTop)
+
+
 
 
 
@@ -31,10 +148,6 @@
 |Summarize RBAC roles for the specified subject (ServiceAccount, User and Group)
 |https://github.com/Ladicle/kubectl-rolesum
 
-|sloop
-|
-|
-|https://github.com/salesforce/sloop
 
 |kubectl-neat
 |
@@ -73,27 +186,8 @@
 
 == Categorized (wip)
 
-.Network monitoring
-
-https://github.com/elesiuta/picosnitch
-Monitor network traffic per executable using BPF 
-
-https://github.com/evilsocket/opensnitch
-OpenSnitch is a GNU/Linux port of the Little Snitch application firewall 
 
 
-
-.GPS 
-
-https://github.com/cpesch/RouteConverter
-The popular GPS conversion and editing tool 
-
-
-
-.Pentesting
-
-https://github.com/liamg/traitor
-Automatic Linux privesc via exploitation of low-hanging fruit e.g. gtfobins, pwnkit, dirty pipe, +w docker.sock 
 
 
 .FinOps
@@ -116,68 +210,19 @@ https://github.com/k0sproject/k0s
 k0s is an all-inclusive Kubernetes distribution, which is configured with all of the features needed to build a Kubernetes cluster and packaged as a single binary for ease of use.
 
 
-.Homelab
-
-https://www.cloudron.io/index.html
-Complete solution for running apps on your own server
-
-
-.APM
-
-https://github.com/pinpoint-apm/pinpoint
-APM, (Application Performance Management) tool for large-scale distributed systems. 
-
-
-
-.HTTP proxies
-
-https://github.com/stripe/smokescreen
-A simple HTTP proxy that fogs over naughty URLs 
-
-https://hetty.xyz/docs/
-
-
 .IT asset management
 
-https://github.com/snipe/snipe-it
-A free open source IT asset/license management system 
-
-https://github.com/Combodo/iTop
-A simple, web based IT Service Management tool 
 
 
 
-.Load Testing 
-
-https://github.com/fcsonline/drill
-Drill is an HTTP load testing application written in Rust 
-
-
-.VueJS
-
-https://github.com/primefaces/primevue
-
-
-
-.Diagrams
-
-https://github.com/jwilber/roughViz
 
 
 == Uncategorized
-
-https://gitlab.com/cyber5k/mistborn
-
-* https://github.com/litmuschaos/litmus
-* https://github.com/cruise-automation/k-rail
-
 
 
 https://goauthentik.io/
 
 
-
-https://github.com/kubeovn/kube-ovn
 
 https://github.com/espanso/espanso
  Cross-platform Text Expander written in Rust 
@@ -209,40 +254,8 @@ https://github.com/louislam/uptime-kuma
 https://github.com/sullo/nikto
 
 
-
-dug : powerful global DNS propagation checker
-https://github.com/unfrl/dug
-
 hexyl : is a simple hex viewer for the terminal
 https://github.com/sharkdp/hexyl
 
 pwru : is an eBPF-based tool for tracing network packets in the Linux kernel with advanced filtering capabilities
 https://github.com/cilium/pwru
-
-
-== Categorized
-
-
-
-=== Networks
-
-.DNS
-
-[horizontal]
-dug:: powerful global DNS propagation checker +
-(https://github.com/unfrl/dug)
-
-
-=== Monitoring
-
-=== Security 
-
-=== Cloud 
-
-.Cloud 
-
-[horizontal]
-cloudquery:: transforms your cloud infrastructure into queryable SQL tables for easy monitoring, governance and security 
-(https://github.com/cloudquery/cloudquery)
-
-=== Kubernetes
